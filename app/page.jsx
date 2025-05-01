@@ -6,6 +6,10 @@ import { ProjectsSection } from '@/components/sections/projects';
 import { SkillsSection } from '@/components/sections/skills';
 import { ContactSection } from '@/components/sections/contact';
 
+/**
+ * Home page component that assembles all sections
+ * @returns {JSX.Element} The complete home page
+ */
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
@@ -18,4 +22,4 @@ export default function Home() {
       <Footer />
     </main>
   );
-}
+} 

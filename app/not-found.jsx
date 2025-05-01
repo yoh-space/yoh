@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+/**
+ * 404 Not Found page component
+ * @returns {JSX.Element} Not found page with link to home
+ */
 export default function NotFound() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-background">
@@ -18,4 +22,4 @@ export default function NotFound() {
       </div>
     </div>
   );
-}
+} 
