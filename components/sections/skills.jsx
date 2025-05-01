@@ -24,7 +24,7 @@ export function SkillsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Expertise & Skills
+          Expertise Technical Skills
         </motion.h2>
         
         <motion.p 
