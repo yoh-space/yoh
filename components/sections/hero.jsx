@@ -13,13 +13,33 @@ import { useTheme } from "next-themes";
  */
 export function HeroSection() {
   const [currentTagline, setCurrentTagline] = useState(0);
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const taglines = [
     "Mobile App Developer",
     "React Native Expert",
     "Software Engineer"
   ];
 
+  // Set dark theme as default and handle mounting
+  useEffect(() => {
+    setTheme('dark');
+    setMounted(true);
+  }, []);
+  
+  // Apply theme class to document when theme changes
+  useEffect(() => {
+    if (!mounted) return;
+    
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+    } else {
+      document.documentElement.classList.add('light');
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme, mounted]);
+  
   // Rotate through taglines
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,10 +48,16 @@ export function HeroSection() {
     return () => clearInterval(interval);
   }, []);
 
+  // Don't render until mounted to avoid hydration mismatch
+  if (!mounted) return null;
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-16 overflow-hidden max-w-full">
       {/* 3D Animated Background */}
-      <ThreeJSBackground />
+      <ThreeJSBackground 
+        color1={theme === 'dark' ? "#0f172a" : undefined} 
+        color2={theme === 'dark' ? "#64f5ff" : undefined} 
+      />
       
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80 z-[1]" />
@@ -40,28 +66,23 @@ export function HeroSection() {
         <div className="flex flex-col md:flex-row items-center">
           {/* Profile Image with Holographic Effect */}
           <motion.div 
-            className="md:w-1/2 order-2 md:order-1 mb-12 md:mb-0"
+            className="hidden md:block md:w-1/2 order-2 md:order-1 mb-12 md:mb-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 animate-pulse blur-xl" />
-              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/50 p-1">
-                <img 
-                  src="/assets/porti.png" 
-                  alt="Yohannes Damtie" 
-                  className="w-full h-full object-cover rounded-full"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-primary/10 to-secondary/20 rounded-full" />
-              </div>
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-30 animate-pulse" />
+            <div className="w-64 h-64 md:w-80 md:h-80 mx-auto">
+              <img 
+                src="/portifolio.png" 
+                alt="Yohannes Damtie" 
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
           </motion.div>
           
           {/* Text Content */}
           <motion.div 
-            className="md:w-1/2 order-1 md:order-2 max-w-full"
+            className="w-full md:w-1/2 order-1 md:order-2 max-w-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -133,29 +154,6 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
         </div>
-        
-        {/* Scroll Indicator */}
-        <motion.div 
-          className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center w-full mt-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center p-1">
-            <motion.div 
-              className="w-1.5 h-1.5 bg-primary rounded-full"
-              animate={{ 
-                y: [0, 12, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-            />
-          </div>
-          <p className="text-primary text-sm mt-2">Scroll Down</p>
-        </motion.div>
       </div>
     </section>
   );

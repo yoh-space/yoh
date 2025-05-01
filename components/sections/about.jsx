@@ -31,7 +31,7 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <Image
-              src={"../../public/image.png"}
+              src={"aimage.jpg"}
               alt="Yohannes Damtie"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
