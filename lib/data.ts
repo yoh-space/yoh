@@ -96,7 +96,7 @@ export const projectsData = [
     id: 1,
     title: "Freshman Module Plus",
     description: "Comprehensive educational app featuring AI-powered Q&A, PDF resources, NotePad and GPA Calculator and Goal Setting",
-    image: "https://images.pexels.com/photos/5076517/pexels-photo-5076517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "/FreshmanModuleAppImage/photo_8_2025-04-09_20-17-15.jpg",
     tags: ["React Native", "AI Integration", "Firebase"],
     demoUrl: "https://play.google.com/store/apps/details?id=com.freshmanmoduleplus",
     githubUrl: "https://github.com/yohansforex"
@@ -105,7 +105,7 @@ export const projectsData = [
     id: 2,
     title: "Line Follower Robot",
     description: "Autonomous robot with advanced path-following capabilities using infrared sensors and customizable control algorithms.",
-    image: "https://images.pexels.com/photos/6956353/pexels-photo-6956353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "/FreshmanModuleAppImage/photo_7_2025-04-09_20-17-15.jpg",
     tags: ["Arduino", "Circuit Design", "Mechanical"],
     demoUrl: "#",
     githubUrl: "#"
@@ -114,7 +114,7 @@ export const projectsData = [
     id: 3,
     title: "BDU Freshman Assistant Bot",
     description: "Telegram bot providing instant access to academic resources, AI-powered answers, and automated quiz generation for students.",
-    image: "https://images.pexels.com/photos/2422497/pexels-photo-2422497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "/FreshmanBotImage/frew1bot.jpg",
     tags: ["Python", "Telegram API", "Cloud Functions"],
     demoUrl: "https://t.me/bdu_freshman_bot",
     githubUrl: "https://github.com/yohansforex"
@@ -123,7 +123,7 @@ export const projectsData = [
     id: 4,
     title: "Hike Engineering Company Profile",
     description: "Client: Hike Engineering Solution PLC. A professional website showcasing the company's services, projects, and contact information.",
-    image: "https://images.pexels.com/photos/3987019/pexels-photo-3987019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "/HikeEngineering/1.png",
     tags: ["CSS", "JavaScript", "React"],
     demoUrl: "https://hike-engineering.vercel.app",
     githubUrl: "https://github.com/yohansforex"
@@ -132,7 +132,7 @@ export const projectsData = [
     id: 5,
     title: "Personal Profile Website",
     description: "Client: Biomedical Engineer, Youtuber Ermias Mulusew (@Escape_out) A personal website showcasing skills, projects, and contact information.",
-    image: "https://images.pexels.com/photos/3987019/pexels-photo-3987019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "/ErmiasMulusew/1.png",
     tags: ["CSS", "JavaScript", "React"],
     demoUrl: "https://ermias-mulusew.vercel.app",
     githubUrl: "https://github.com/yohansforex"
@@ -141,7 +141,7 @@ export const projectsData = [
     id: 6,
     title: "Historical Book App",
     description: "Client: Author of Handhuuraa Oromoo Arsii Ibro Walliiyii (A.G) Minosota USA",
-    image: "https://images.pexels.com/photos/3987019/pexels-photo-3987019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "/FreshmanModuleAppImage/photo_5_2025-04-09_20-17-15.jpg",
     tags: ["CSS", "JavaScript", "React"],
     demoUrl: "https://play.google.com/store/apps/details?id=com.custompdfreader",
     githubUrl: "https://github.com/yohansforex"

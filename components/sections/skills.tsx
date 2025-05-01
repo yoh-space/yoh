@@ -34,12 +34,12 @@ export function SkillsSection() {
           transition={{ duration: 0.8 }}
         >
           <Tabs defaultValue={skillsData[0].category} className="w-full">
-            <TabsList className="w-full max-w-xl mx-auto grid grid-cols-3 h-14 bg-muted/50 backdrop-blur-sm border border-border/50 rounded-xl">
+            <TabsList className="w-full max-w-xl mx-auto grid grid-cols-3 h-14  backdrop-blur-sm border border-border/50 rounded-xl">
               {skillsData.map((category) => (
                 <TabsTrigger 
                   key={category.category} 
                   value={category.category}
-                  className="rounded-lg data-[state=active]:bg-primary/10 data-[state=active]:text-primary data-[state=active]:shadow-sm"
+                  className="rounded-lg data-[state=active] data-[state=active]:text-primary data-[state=active]:shadow-sm"
                 >
                   {category.category}
                 </TabsTrigger>
